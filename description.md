@@ -1,0 +1,1 @@
+En esta lección, la arquitectura Q incorpora algunos elementos para su nueva versión Q3
