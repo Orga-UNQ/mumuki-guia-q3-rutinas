@@ -49,7 +49,7 @@ Entonces es posible **rescatar un patrón**:
 3. guardar el resultado en la celda que corresponda
 
 
-(Antes)[2534-ejecucion-de-programas-q3-rutinas-dividir-en-subrutinas] dijimos que una rutina es un programa que resuelve un problema acotado, pero ahora podemos agregar que son muy útiles para resolver problemas **recurrentes**
+[Antes](2534-ejecucion-de-programas-q3-rutinas-dividir-en-subrutinas) dijimos que una rutina es un programa que resuelve un problema acotado, pero ahora podemos agregar que son muy útiles para resolver problemas **recurrentes**
 
 Entonces, algunas rutinas son pensadas para poder ser usadas en múltiples ocasiones. 
 
