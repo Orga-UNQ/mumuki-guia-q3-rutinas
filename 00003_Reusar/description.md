@@ -68,7 +68,7 @@ Bueno, pero este código no es correcto en Q3.
 
 Aquello que varía en el ejemplo anterior (`?`) se denomina **parámetro**, y es una variable cuyo valor se debe configurar previamente a la llamada de la rutina. 
 
-Para que sea parametrizable, la rutina anterior puede tomar como parámetro el valor en el registro R0 y se reescribe:
+Para que sea parametrizable, una posibilidad es que la rutina anterior tome como parámetro el valor en el registro R0 y se reescribe:
 
 ```
 pot5: MOV R1, R0
