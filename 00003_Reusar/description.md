@@ -94,7 +94,7 @@ CALL pot5
 
 ## Recuperando resultados
 
-Usando la rutina de la manera que se indica, el resultado queda en R0 y no en la celda A001, como se necesitaba. Por lo tanto, luego de terminada la ejecución de la rutina, se debe guardar el resultado adecuadamente:
+Hasta acá, bastante bien, pero... al usar la rutina de la manera que lo hicimos, el resultado queda en R0 y no en la celda A001, como se necesitaba. Por lo tanto, luego de terminada la ejecución de la rutina, se debe guardar el resultado adecuadamente:
 
 ```
 MOV R0, [0xA001]
