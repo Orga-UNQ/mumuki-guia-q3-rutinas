@@ -1,3 +1,2 @@
-equal: ''
-
+equal: 'CALL r1'
 ignore_whitespace: true
