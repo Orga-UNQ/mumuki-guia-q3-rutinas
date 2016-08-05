@@ -79,7 +79,7 @@ pot5: MOV R1, R0
       MOV R0, R1
 ```
 
-Entonces ¿Cómo se llama esta subrutina?
+Entonces ¿Cómo se invoca esta subrutina?
 
 # Pasando parámetros
 
