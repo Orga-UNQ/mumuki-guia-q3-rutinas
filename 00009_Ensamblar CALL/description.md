@@ -1,6 +1,6 @@
-# Novedades en Q3
+## El código máquina del CALL
 
-La arquitectura Q3 especifica dos nuevas instrucciones: `CALL` y `RET`. `CALL` es la única instrucción de un operando orígen, y el formato de instrucción es
+`CALL` es la única instrucción de un operando orígen, y el formato de instrucción es
 
 | codop | relleno | Modo Origen | Operando Origen|
 |-------|---------|-------------|----------------|
@@ -35,6 +35,40 @@ Te imaginás como escribir una instrucción CALL en cada caso? Sería algo como 
 
 
 Interesante! Pero... a cual corresponde algo como `CALL etiqueta`?
+
+## Ensamblar una etiqueta
+
+La etiqueta es un recurso muy práctico para los programadores, pero se pierden a la hora de ensamblar el código fuente en código máquina, convirtiéndose en las **direcciones reales** del codigo máquina de cada rutina.
+
+Es decir, al ubicarse una rutina en memoria, se puede determinar **cuanto vale una etiqueta** y este valor es usado en todos los `CALL` que hacen referencia a la misma.
+
+Por ejemplo, el siguiente código fuente está ensamblado a partir de `A000`
+
+```
+etiq: ADD R0, R1 
+      RET
+      
+CALL etiq
+```
+Esto es equivalente a reemplazar:
+
+```
+ADD R0, R1 
+RET
+      
+CALL 0xA000
+```
+
+Este criterio se basa en el efecto (o ejecución del CALL) que dice: `PC<- Origen`. Entonces, una vez ensamblada y ubicada en memoria, la dirección de inicio de la rutina no cambia, es constante o equivalentemente es de tipo **inmediato**
+
+Veámoslo en un *mapa de memoria*:
+
+|dir|contenido|corresponde a|
+|---|---------|-------------|
+|A000| 0010 100000 100001 | ADD R0, R1 |
+|A001|              |RET|
+|A002| 1011 000000 0000000 1010 0000 0000 0000| CALL 0xA000
+
 
 ## Hora de pensar
 
