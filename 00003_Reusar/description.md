@@ -42,9 +42,9 @@ En particular en este ejercicio, sospechamos que es posible ahorrar trabajo, pue
 
 Entonces es posible **rescatar un patrón**:
 
-1.Copiar el contenido de [x] a un registro,
-2.multiplicarlo 4 veces por sí mismo y 
-3.guardar el resultado en [x]
+1. Copiar el contenido de [x] a un registro,
+2. multiplicarlo 4 veces por sí mismo y 
+3. guardar el resultado en [x]
 
 
 (Antes)[2534-ejecucion-de-programas-q3-rutinas-dividir-en-subrutinas] dijimos que una rutina es un programa que resuelve un problema acotado, pero ahora podemos agregar que son muy útiles para resolver problemas **recurrentes**
