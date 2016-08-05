@@ -1,1 +1,3 @@
-equals ''
+equal: ''
+
+ignore_whitespace: true
