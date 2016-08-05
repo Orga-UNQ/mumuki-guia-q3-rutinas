@@ -42,9 +42,9 @@ En particular en este ejercicio, sospechamos que es posible ahorrar trabajo, pue
 
 Entonces es posible **rescatar un patrón**:
 
-1. Copiar el contenido de [x] a un registro,
+1. Copiar el valor a procesar a un registro,
 2. multiplicarlo 4 veces por sí mismo y 
-3. guardar el resultado en [x]
+3. guardar el resultado en la celda que corresponda
 
 
 (Antes)[2534-ejecucion-de-programas-q3-rutinas-dividir-en-subrutinas] dijimos que una rutina es un programa que resuelve un problema acotado, pero ahora podemos agregar que son muy útiles para resolver problemas **recurrentes**
@@ -54,12 +54,12 @@ Entonces, algunas rutinas son pensadas para poder ser usadas en múltiples ocasi
 ¿Cómo sería esa rutina? 
 
 ```
-pot5: MOV R1, [x]
-      MUL R1, [x]
-      MUL R1, [x]
-      MUL R1, [x]
-      MUL R1, [x]
-      MOV [x], R1
+pot5: MOV R1, ?
+      MUL R1, ?
+      MUL R1, ?
+      MUL R1, ?
+      MUL R1, ?
+      MOV ?, R1
 ```
 
 Bueno, pero este código no es correcto en Q3. 
