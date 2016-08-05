@@ -115,6 +115,7 @@ pot5: MOV R1, R0
 ```
 
 Programa principal:
+
 ```
 MOV R0, [0xA001]
 CALL pot5
