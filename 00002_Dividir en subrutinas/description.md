@@ -35,7 +35,7 @@ Una rutina es un programa que resuelve un problema **acotado**, y el diseño de 
 ¿Cómo se integran las partes o rutinas? Se necesita hacer dos cosas:
 
 * Encapsular las rutinas: esto es, delimitar comienzo y fin de la rutina. Para esto se utiliza una etiqueta y una instrucciòn especial RET
-  * comienzo: etiqueta que la identifique unívocamente
+  * comienzo: La etiqueta es un texto (seguido por ":") que identifique la rutina unívocamente, y que se coloca junto a la primer instrucción.
   * fin: instrucción RET. Este instrucción provoca que el flujo de programa vuelva a **la instrucción siguiente al último CALL**
 * Invocar las rutinas: el lenguaje Q3 provee una instrucción CALL que desvía el flujo del programa hacia la instrucción marcada con la etiqueta
 
