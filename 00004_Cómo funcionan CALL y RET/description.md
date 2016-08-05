@@ -10,8 +10,14 @@ rutB: ADD R2, 0x0100
       DIV R4, R2
       RET
 ```
-Y luego se ensamblan de la siguiente manera:
 ```
 CALL rutA
 CALL rutB
 ```
+
+La pregunta que nos hacemos es: ¿En que orden se ejecutan las instrucciones?
+
+|Instrucción|Efecto|
+|-----------|-----------|
+|`CALL rutA`| DEsvía el flujo hacia la primer instrucción de la rutina A|
+|``||
