@@ -2,14 +2,14 @@
 
 `CALL` es la única instrucción de un operando orígen, y el formato de instrucción es
 
-| codop | relleno | Modo Origen | Operando Origen|
+|[codop]|[relleno]|[Modo Origen]|[Operando Origen]|
 |:-------:|---------|-------------|----------------|
 | 4b    | 000000  |   6b        | 16 b           |
 
 La tabla de códigos de operaciones es:
 
 | Instrucción | codop | Efecto|
-|-------------|-------|-----------|
+|:-----------:|:-----:|:---------:|
 | CALL        | 1011  | `PC<--Origen` |
 
 
