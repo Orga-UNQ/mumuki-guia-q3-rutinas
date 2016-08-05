@@ -83,7 +83,7 @@ Entonces ¿Cómo se invoca esta subrutina?
 
 # Pasando parámetros
 
-Sabiendo que pot5 espera en R0 el valor a *elevar a la quinta*, su invocación es como sigue:
+Sabiendo que `pot5` espera en R0 el valor a *elevar a la quinta*, su invocación es como sigue:
 
 ```
 MOV R0, [0xA001]
