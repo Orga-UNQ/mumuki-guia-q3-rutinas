@@ -30,7 +30,15 @@ pot5A3: MOV R1, [0xA003]
 ```
 
 
+¿Cómo es el programa *cliente* de esas rutinas?
 
+```
+CALL potA001
+CALL potA002
+CALL potA003
+```
+
+En particular en este ejercicio, sospechamos que es posible ahorrar trabajo, pues vemos que hay mucho en común entre las tres rutinas. 
 
 Entonces es posible **rescatar un patrón**:
 
@@ -43,22 +51,78 @@ Entonces es posible **rescatar un patrón**:
 
 Entonces, algunas rutinas son pensadas para poder ser usadas en múltiples ocasiones. 
 
-Trabajemos sobre el ejemplo: el código de la rutina puede ser como sigue:
+¿Cómo sería esa rutina? 
 
 ```
-pot5: MOV R1, [0xA001]
-      MUL R1, [0xA001]
-      MUL R1, [0xA001]
-      MUL R1, [0xA001]
-      MUL R1, [0xA001]
-      MOV [0xA001], R1
+pot5: MOV R1, [x]
+      MUL R1, [x]
+      MUL R1, [x]
+      MUL R1, [x]
+      MUL R1, [x]
+      MOV [x], R1
 ```
 
-configurando un pasaje de parámetros
-¿Cómo se integran las partes o rutinas? Se necesita hacer dos cosas:
-Encapsular las rutinas: delimitar comienzo y fin. Para esto se utiliza una etiqueta y una instrucciòn especial RET
-comienzo: etiqueta que la identifique unívocamente
-fin: instrucción RET
+Bueno, pero este código no es correcto en Q3. 
+
+# Configurando parámetros
+
+Aquello que varía en el ejemplo anterior (`[x]`) se denomina **parámetro**, y es una variable cuyo valor se debe configurar previamente a la llamada de la rutina. 
+
+Para que sea parametrizable, la rutina anterior puede tomar como parámetro el valor en el registro R0 y se reescribe:
+
+```
+pot5: MOV R1, R0
+      MUL R1, R0
+      MUL R1, R0
+      MUL R1, R0
+      MUL R1, R0
+      MOV R0, R1
+```
+
+Entonces ¿Cómo se llama esta subrutina?
+
+# Pasando parámetros
+
+Sabiendo que pot5 espera en R0 el valor a *elevar a la quinta*, su invocación es como sigue:
+
+```
+MOV R0, [0xA001]
+CALL pot5
+```
+# Recuperando resultados
+
+Usando la rutina de la manera que se indica, el resultado queda en R0 y no en la celda A001, como se necesitaba. Por lo tanto, luego de terminada la ejecución de la rutina, se debe guardar el resultado adecuadamente:
+
+```
+MOV R0, [0xA001]
+CALL pot5
+MOV  [0xA001], R0
+```
+
+# Pasando en limpio
 
 
-escribir un programa...
+```
+pot5: MOV R1, R0
+      MUL R1, R0
+      MUL R1, R0
+      MUL R1, R0
+      MUL R1, R0
+      MOV R0, R1
+```
+
+Programa principal:
+```
+MOV R0, [0xA001]
+CALL pot5
+MOV  [0xA001], R0
+MOV R0, [0xA002]
+CALL pot5
+MOV  [0xA002], R0
+MOV R0, [0xA002]
+CALL pot5
+MOV  [0xA002], R0
+```
+
+
+# A trabajar
