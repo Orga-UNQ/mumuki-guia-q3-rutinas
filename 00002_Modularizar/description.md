@@ -24,10 +24,10 @@ ADD R2, 0x0100
 DIV R4, R2
 ```
 
-Una rutina es un programa que resuelve un problema **acotado**, y el diseño de programas usando rutinas (también llamadas subrutinas) permite simplificar las soluciones. Es decir que deben identificar las partes para luego resolver cada una independientemente y luego **ensamblarlas**.
+Una rutina es un programa que resuelve un problema **acotado**, y el diseño de programas usando rutinas (también llamadas subrutinas) permite simplificar las soluciones. Es decir que deben identificar las partes para luego resolver cada una independientemente y luego **componerlas**.
 
 
-# Ensamblando partes
+# Componiendo partes
 
 ¿Cómo se integran las partes o rutinas? Se necesita hacer dos cosas:
 * Encapsular las rutinas: esto es, delimitar comienzo y fin de la rutina. Para esto se utiliza una etiqueta y una instrucciòn especial RET
