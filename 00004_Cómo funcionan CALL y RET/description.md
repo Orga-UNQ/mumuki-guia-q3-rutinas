@@ -1,4 +1,4 @@
-
+Retomemos el ejercicio anterior. Teníamos el siguiente código:
 ```
 rutA: MOV R3, 0x005F 
       ADD R3, R1
@@ -20,4 +20,5 @@ La pregunta que nos hacemos es: ¿En que orden se ejecutan las instrucciones?
 |Instrucción|Efecto|
 |-----------|-----------|
 |`CALL rutA`| DEsvía el flujo hacia la primer instrucción de la rutina A|
-|``||
+|`MOV R3, 0x005F`| R3=0x005F|
+|`MOV R3, 0x005F`| R3=0x005F|
