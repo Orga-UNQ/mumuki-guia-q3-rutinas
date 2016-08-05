@@ -33,6 +33,7 @@ Una rutina es un programa que resuelve un problema **acotado**, y el diseño de 
 # Componiendo partes
 
 ¿Cómo se integran las partes o rutinas? Se necesita hacer dos cosas:
+
 * Encapsular las rutinas: esto es, delimitar comienzo y fin de la rutina. Para esto se utiliza una etiqueta y una instrucciòn especial RET
   * comienzo: etiqueta que la identifique unívocamente
   * fin: instrucción RET. Este instrucción provoca que el flujo de programa vuelva a **la instrucción siguiente al último CALL**
