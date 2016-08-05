@@ -38,6 +38,8 @@ CALL potA002
 CALL potA003
 ```
 
+# Encontremos el patrón
+
 En particular en este ejercicio, sospechamos que es posible ahorrar trabajo, pues vemos que hay mucho en común entre las tres rutinas. 
 
 Entonces es posible **rescatar un patrón**:
@@ -64,7 +66,7 @@ pot5: MOV R1, ?
 
 Bueno, pero este código no es correcto en Q3. 
 
-# Configurando parámetros
+## Configurando parámetros
 
 Aquello que varía en el ejemplo anterior (`?`) se denomina **parámetro**, y es una variable cuyo valor se debe configurar previamente a la llamada de la rutina. 
 
@@ -81,7 +83,7 @@ pot5: MOV R1, R0
 
 Entonces ¿Cómo se invoca esta subrutina?
 
-# Pasando parámetros
+## Pasando parámetros
 
 Sabiendo que `pot5` espera en R0 el valor a *elevar a la quinta*, su invocación es como sigue:
 
@@ -89,7 +91,8 @@ Sabiendo que `pot5` espera en R0 el valor a *elevar a la quinta*, su invocación
 MOV R0, [0xA001]
 CALL pot5
 ```
-# Recuperando resultados
+
+## Recuperando resultados
 
 Usando la rutina de la manera que se indica, el resultado queda en R0 y no en la celda A001, como se necesitaba. Por lo tanto, luego de terminada la ejecución de la rutina, se debe guardar el resultado adecuadamente:
 
