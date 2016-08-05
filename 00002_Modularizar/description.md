@@ -9,18 +9,21 @@ Una forma de abordarlo es tomarlo como dos problemas de menor complejidad:
 
 Término A | Término B
 --- | --- 
-`(95+R1)*18` | `R1/(R2+256)`
+`(95+R1)*18` | `1/(R2+256)`
 
 Entonces, el código que resuelve el termino A podría ser:
+
 ```
 MOV R3, 0x005F 
 ADD R3, R1
 MUL R3, 0x0012 
 ```
+
 Y el correspondiente al término B:
 
 ```
 ADD R2, 0x0100 
+MOV R4, 0x0001
 DIV R4, R2
 ```
 
@@ -45,6 +48,7 @@ rutA: MOV R3, 0x005F
 ```
 ```
 rutB: ADD R2, 0x0100 
+      MOV R4, 0x0001
       DIV R4, R2
       RET
 ```
