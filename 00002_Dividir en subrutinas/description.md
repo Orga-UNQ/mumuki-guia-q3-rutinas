@@ -69,6 +69,7 @@ CALL rutB
 # A trabajar
 
 Se tiene la siguiente rutina:
+
 ```
 rutInicializadora: MOV R4,0x0010
                    RET
