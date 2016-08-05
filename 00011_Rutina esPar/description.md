@@ -1,0 +1,1 @@
+Escriba una rutina `esPar`, que determine si el contenido de R0 es par o impar. Si es par, debe guardar un 0 en R1, en caso contrario, debe guardar un 1 en dicho registro. 
