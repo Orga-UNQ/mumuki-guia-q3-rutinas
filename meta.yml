@@ -4,7 +4,7 @@ locale: es
 type: learning
 beta: false
 teacher_info: ''
-language: text
+language: qsim
 id_format: '%05d'
 order:
 - 2
