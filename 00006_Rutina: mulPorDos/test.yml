@@ -1,2 +1,5 @@
-equal: ''
-ignore_whitespace: true
+examples:
+- name: 'El resultado del registro es correcto'
+  postconditions:
+    equal:
+      R1: '0014'
