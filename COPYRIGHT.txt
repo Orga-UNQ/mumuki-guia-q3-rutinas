@@ -1,0 +1,5 @@
+Copyright Mara Dalponte and contributors
+
+This content consists of voluntary contributions made by many
+individuals. For exact contribution history, see its revision history
+available at https://github.com/orga-unq/mumuki-guia-q3-rutinas and the AUTHORS.txt file.
