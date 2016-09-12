@@ -1,0 +1,2 @@
+rutInicializadora: MOV R4,0x0010
+                   RET
