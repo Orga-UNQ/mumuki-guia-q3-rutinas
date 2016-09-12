@@ -17,7 +17,7 @@ CALL rutA
 CALL rutB
 ```
 
-La pregunta que nos hacemos es: ¿En que orden se ejecutan las instrucciones? Para respondarla, supongamos el siguiente estado inicial:
+La pregunta que nos hacemos es: ¿En que orden se ejecutan las instrucciones? Para responderla, supongamos el siguiente estado inicial:
 
 | variable | valor inicial|
 |---------|-------|
@@ -41,7 +41,7 @@ Entonces se ejecuta la siguiente secuencia:
 
 Otra pregunta que deberías estar haciéndote: ¿Cómo sabemos que la ejecución empieza en el primer CALL? Esa cuestión la retomaremos mas adelante...
 
-# Poner en práctica
+#### Poner en práctica
 
 Supongamos el siguiente código:
 
