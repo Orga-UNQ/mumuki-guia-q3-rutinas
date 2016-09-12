@@ -1,5 +1,2 @@
-examples:
-- name: 'El resultado del registro es correcto'
-  postconditions:
-    equal:
-      R4: '0010'
+equal: 'CALL rutInicializadora'
+ignore_whitespace: true
