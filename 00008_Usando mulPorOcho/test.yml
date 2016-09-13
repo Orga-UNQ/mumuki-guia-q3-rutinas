@@ -1,1 +1,5 @@
-equal: ''
+examples:
+- name: 'El valor de R1 es correcto'
+  postconditions:
+    equal:
+      R1: '0200'
