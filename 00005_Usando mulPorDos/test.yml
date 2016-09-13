@@ -1,5 +1,5 @@
 examples:
-- name: 'El resultado del registro es correcto'
+- name: 'El valor de R1 es correcto'
   postconditions:
     equal:
       R1: '0020'
