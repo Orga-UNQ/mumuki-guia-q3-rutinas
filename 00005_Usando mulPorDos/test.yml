@@ -2,4 +2,4 @@ examples:
 - name: 'El resultado del registro es correcto'
   postconditions:
     equal:
-      R1: '0001'
+      R1: '0020'
