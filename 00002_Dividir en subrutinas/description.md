@@ -37,6 +37,7 @@ Una rutina es un programa que resuelve un problema **acotado**, y el diseño de 
 ## Encapsular las rutinas
 
 El encapsulamiento no es ni mas ni menos que la tarea de delimitar comienzo y fin de la rutina. Para esto se utiliza una etiqueta y una instrucciòn especial RET
+
 * Al comienzo: La etiqueta es un texto (seguido por ":") que identifique la rutina unívocamente, y que se coloca junto a la primer instrucción.
 * Al final: instrucción RET. Este instrucción provoca que el flujo de programa vuelva a **la instrucción siguiente al último CALL**
 
