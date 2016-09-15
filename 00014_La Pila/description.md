@@ -44,6 +44,7 @@ PC2<-PC3
 ### Les presento… una pila
 
 Para solucionar este problema utilizaremos una *estructura de datos* (o una forma de organizar/estructurar un conjunto de datos) que se denomina **PILA**. Esta estructura puede pensarse como una pila de platos, es decir que los datos se manejan siempre desde el tope de la pila, dando lugar a las siguientes operaciones sobre la pila:
+
 1. Poner un plato en la pila, denominado **APILAR** (push), es decir agregar un elemento sobre el último elemento agregado.
 2. Retirar un plato de la pila, denominado **DESAPILAR** (pop) es decir  se le  saca del "tope" o primer plato de la pila.
 
