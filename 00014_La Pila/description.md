@@ -82,6 +82,46 @@ Asumimos que la pila comienza en la dirección **FFEF** de memoria. Pensemos que
 |FFEF|BBBB|
 |    |  ... |
 
-Eso implica que con cada push se debe **decrementar** la dirección que indica el tope de pila (Ver donde está el tope en el gráfico anterior)
-Agregamos el elemento 1002 ¿donde queda el tope de pila?
-Supongamos que ahora se quiere desapilar (hacer un pop). El tope de pila debe ajustarse y luego debe copiarse el dato, porque el invariante es que el tope de pila representa el primer lugar disponible sobre los valores ya apilados.¿De que manera? ahora el tope de pila debe incrementarse.
+Eso implica que con cada push se debe **decrementar** la dirección que indica el tope de pila (Ver donde está el tope en el gráfico anterior).
+
+Ahora agregamos el elemento 1002 ¿donde queda el tope de pila? Graficamente:
+
+
+|    | ...  |
+|--- |---|
+|FFE9|????|
+|FFEA|????|
+|FFEB|????|
+|FFEC|????|
+|**FFED**|????|
+|FFEE|1002|
+|FFEF|BBBB|
+|    |  ... |
+
+Supongamos que ahora se quiere **desapilar** (hacer un pop). El tope de pila debe ajustarse y luego debe copiarse el dato, porque el **invariante** es que el tope de pila representa el primer lugar disponible sobre los valores ya apilados.
+
+¿De que manera? ahora el tope de pila debe **incrementarse**, como se grafica:
+
+
+|    | ...  |
+|--- |---|
+|FFE9|????|
+|FFEA|????|
+|FFEB|????|
+|FFEC|????|
+|**FFED**|????|
+|FFEE|1002|
+|FFEF|BBBB|
+|    |  ... |
+
+
+#### ¿Y dónde está el tope de pila?
+
+Como vemos, en todo momento necesitamos saber dónde se encuentra el tope de pila, entonces para su seguimiento usaremos un registro especial llamado **SP** (*Stack Pointer*). Este registro contiene la dirección de la primer celda de memoria disponible de la pila (cumple con el invariante mencionado).
+Entonces las operaciones de la pila son:
+* **Push**: Es una escritura en memoria.
+  1. Escribe el dato que en la dirección que está en SP 
+  2. y se decrementa SP, para dejar todo listo al nuevo tope de pila.
+* **Pop**: Es una lectura de memoria
+  1. Se incrementa SP (para que haga referencia a un dato dentro de la pila)
+  2. Se hace una lectura de la dirección que está en SP
