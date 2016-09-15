@@ -120,6 +120,7 @@ Supongamos que ahora se quiere **desapilar** (hacer un pop). El tope de pila deb
 
 Como vemos, en todo momento necesitamos saber dónde se encuentra el tope de pila, entonces para su seguimiento usaremos un registro especial llamado **SP** (*Stack Pointer*). Este registro contiene la dirección de la primer celda de memoria disponible de la pila (cumple con el invariante mencionado).
 Entonces las operaciones de la pila son:
+
 * **Push**: Es una escritura en memoria.
   1. Escribe el dato que en la dirección que está en SP 
   2. y se decrementa SP, para dejar todo listo al nuevo tope de pila.
