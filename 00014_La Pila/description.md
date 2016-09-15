@@ -125,3 +125,11 @@ Entonces las operaciones de la pila son:
 * **Pop**: Es una lectura de memoria
   1. Se incrementa SP (para que haga referencia a un dato dentro de la pila)
   2. Se hace una lectura de la dirección que está en SP
+
+
+### Atención
+
+Algunos detalles a tener en cuenta:
+
+1. El tamaño y la ubicación de la pila está definido por la arquitectura. En nuestro caso en Q3 comienza en FFFE, pero no en todas las arquitecturas eso es necesariamente asi.
+2. El pop no *blanquea* (elimina el contenido de) el tope de la pila sino que, por definición de cómo funcionan push y pop, ese dato ya no se puede acceder.
