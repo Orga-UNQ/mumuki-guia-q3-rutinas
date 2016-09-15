@@ -135,3 +135,44 @@ Algunos detalles a tener en cuenta:
 
 1. El tamaño y la ubicación de la pila está definido por la arquitectura. En nuestro caso en Q3 comienza en FFFE, pero no en todas las arquitecturas eso es necesariamente asi.
 2. El pop no *blanquea* (elimina el contenido de) el tope de la pila sino que, por definición de cómo funcionan push y pop, ese dato ya no se puede acceder.
+
+
+## ¿ Cómo relacionamos esto con  CALL y RET?
+
+Recordemos que:
+
+* Instrucción CALL: Desvía el flujo del programa a la instrucción que define la etiqueta.
+* Instrucción RET: Permite restituir el flujo del programa a la instrucción siguiente del último llamado.
+
+Para que esto sea posible se utiliza un pila, donde la instrucción que produce un push es ```CALL```, y la que produce un pop es ```RET```. Detallemos un poco:
+
+* La instrucción```CALL``` apila la dirección de la siguiente instrucción. Durante la etapa de *ejecución de instrucción*  (ver [ciclo revisado](http://orga-unq.mumuki.io/exercises/2920-ejecucion-de-programas-memoria-buses-y-q2-paso-a-paso)) dicha dirección está en el registro PC 
+* La instrucción ```RET``` desapila para actualizar **PC**
+
+### Seguimiento de la ejecución
+
+Para hacer el seguimiento de la ejecución, confeccionaremos una tabla que nos permitirá mostrar como varían los registros PC y SP durante la ejecución de un programa:
+
+```
+rutina1: MOV R1, R0
+         RET
+
+programa: CALL rutina1
+          CALL rutina1
+```
+
+Para este ejemplo necesitamos saber:
+
+* rutina1 está ensamblada a partir de la celda 0x00E0
+* programa está ensamblado a partir de la celda 0x1000
+* PC inicialmente vale 1000
+* La pila está vacía (es decir, SP=FFEF
+
+
+| Instruccion          | PC luego de B.I | PC luego de E.I | SP luego de E.I. |Tope de pila|
+| ``` CALL rutina1```  | 1002            | 00E0            | FFEE             | 1002       |
+| ``` MOV R1, R0```    | 00E1            | 00E1            | FFEE             | 1002       |
+| ``` RET```           | 00E2            | 1002            | FFEF             | -          |
+| ``` CALL rutina1```  | 1004            | 00E0            | FFEE             | 1004       |
+| ``` MOV R1, R0```    | 00E1            | 00E1            | FFEE             | 1004       |
+| ``` RET```           | 00E2            | 1004            | FFEF             | -          |
