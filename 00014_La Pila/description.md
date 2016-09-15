@@ -170,6 +170,7 @@ Para este ejemplo necesitamos saber:
 
 
 | Instruccion          | PC luego de B.I | PC luego de E.I | SP luego de E.I. |Tope de pila|
+|---|---|---|---|---|
 | ``` CALL rutina1```  | 1002            | 00E0            | FFEE             | 1002       |
 | ``` MOV R1, R0```    | 00E1            | 00E1            | FFEE             | 1002       |
 | ``` RET```           | 00E2            | 1002            | FFEF             | -          |
