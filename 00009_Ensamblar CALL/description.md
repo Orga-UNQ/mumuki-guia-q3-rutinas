@@ -1,31 +1,45 @@
 ## El código máquina del CALL
 
-`CALL` es la única instrucción de un operando orígen, y el formato de instrucción es
-
-|[codop]|[relleno]|[Modo Origen]|[Operando Origen]|
-|:-------:|---------|-------------|----------------|
-| 4b    | 000000  |   6b        | 16 b           |
-
-La tabla de códigos de operaciones es:
-
-| Instrucción | codop | Efecto|
-|:-----------:|:-----:|:---------:|
-| CALL        | 1011  | `PC<--Origen` |
+La instrucción `CALL` es la única de un operando orígen, y el formato de instrucción es (ver [especificación](http://orga-unq.mumuki.io/exercises/2711-ejecucion-de-programas-q3-rutinas-especificacion-de-q3))
 
 
-¿Porqué se considera un operando Origen? Pues el nuevo valor de PC es, justamente, el operando, y el operando destino de la instrucción CALL es siempre el mismo: **el registro PC**
+<table class="tg">
+  <tr>
+    <th class="tg-7geq">codop</th>
+    <th class="tg-7geq">Relleno<br></th>
+    <th class="tg-7geq">modo Origen<br></th>
+    <th class="tg-7geq">operando Origen<br></th>
+  </tr>
+  <tr>
+    <td class="tg-quxf">4 bits<br></td>
+    <td class="tg-quxf">000000<br></td>
+    <td class="tg-quxf">6 bits<br></td>
+    <td class="tg-quxf">16 bits</td>
+  </tr>
+</table>
+
+Como se indica en la  [especificación](http://orga-unq.mumuki.io/exercises/2711-ejecucion-de-programas-q3-rutinas-especificacion-de-q3), el efecto que se espera es: 
+```
+[SP]=PC; 
+SP=SP-1; 
+PC=Origen
+```
+
+**¿Porqué se considera un operando Origen? **
+
+Pues porque el nuevo valor de PC es, justamente, el operando, y el operando destino de la instrucción CALL es siempre el mismo: **el registro PC**
 
 Un ejemplo de uso: `CALL rutA`
 
 ### Quién es el operando Origen?
 
-Al respetar la ortogonalidad de la arquitectura Q, la instucción CALL puede estar acompañada por un operando en cualquier modo de direccionamiento. Es decir:
+Al respetar la [ortogonalidad](https://en.wikipedia.org/wiki/Orthogonality_(programming)) de la arquitectura Q, la instucción CALL puede estar acompañada por un operando en cualquier modo de direccionamiento. Es decir:
 
 * Modo directo
 * Modo inmediato
 * Modo registro
 
-Te imaginás como escribir una instrucción CALL en cada caso? Sería algo como lo que sigue:
+¿Te imaginás como escribir una instrucción CALL en cada caso? Sería algo como lo que sigue:
 
 |modo|ejemplo|
 |----|-------|
