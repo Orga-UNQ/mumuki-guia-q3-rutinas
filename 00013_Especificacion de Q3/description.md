@@ -46,6 +46,16 @@
 
 ## Instrucciones sin operandos
 
+<table class="tg">
+  <tr>
+    <th class="tg-7geq">codop</th>
+    <th class="tg-7geq">Relleno<br></th>
+  </tr>
+  <tr>
+    <td class="tg-quxf">4 bits<br></td>
+    <td class="tg-quxf">000000000000<br></td>
+  </tr>
+</table>
 
 # Tablas de Codigos de Operación
 
