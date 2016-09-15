@@ -63,52 +63,53 @@
   <tr>
     <th class="tg-7geq">Instrucción</th>
     <th class="tg-7geq">Tipo</th>
-    <th class="tg-7geq">Codop<br></th>
-    <th class="tg-7geq">Efecto<br></th>
+    <th class="tg-7geq">Codop </th>
+    <th class="tg-7geq">Efecto </th>
   </tr>
   <tr>
     <td class="tg-quxf">MUL</td>
-    <td class="tg-quxf">2 operandos<br></td>
+    <td class="tg-quxf">2 operandos </td>
     <td class="tg-quxf">0000 </td>
     <td class="tg-quxf">Dest=Dest*Origen </td>
   </tr>
   <tr>
     <td class="tg-baqh">MOV</td>
-    <td class="tg-baqh">2 operandos<br></td>
+    <td class="tg-baqh">2 operandos</td>
     <td class="tg-baqh">0001</td>
     <td class="tg-baqh">Dest=Origen </td>
   </tr>
   <tr>
     <td class="tg-sh4c">ADD</td>
-    <td class="tg-sh4c">2 operandos<br></td>
+    <td class="tg-sh4c">2 operandos</td>
     <td class="tg-sh4c">0010</td>
     <td class="tg-sh4c">Dest=Dest+Origen </td>
   </tr>
   <tr>
     <td class="tg-baqh">SUB</td>
-    <td class="tg-baqh">2 operandos<br></td>
+    <td class="tg-baqh">2 operandos</td>
     <td class="tg-baqh">0011</td>
     <td class="tg-baqh">Dest=Dest-Origen</td>
   </tr>
   <tr>
     <td class="tg-sh4c">DIV</td>
-    <td class="tg-sh4c">2 operandos<br></td>
+    <td class="tg-sh4c">2 operandos</td>
     <td class="tg-sh4c">0111</td>
     <td class="tg-sh4c">Dest=Dest%Origen</td>
   </tr>
   <tr>
     <td class="tg-baqh">CALL</td>
-    <td class="tg-baqh">1 op. destino<br></td>
+    <td class="tg-baqh">1 op. destino</td>
     <td class="tg-baqh">1011</td>
     <td class="tg-baqh">[SP]=PC; SP=SP-1; PC=Origen</td>
   </tr>
   <tr>
     <td class="tg-sh4c">RET</td>
-    <td class="tg-sh4c">sin operandos<br></td>
+    <td class="tg-sh4c">sin operandos</td>
     <td class="tg-sh4c">1100</td>
     <td class="tg-sh4c">SP=SP+1; PC=[SP]</td>
   </tr>
 
+</table>
 
 # Modos de direccionamiento
 
