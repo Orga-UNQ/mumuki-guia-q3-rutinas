@@ -111,3 +111,23 @@
 
 
 # Modos de direccionamiento
+
+
+<table class="tg">
+  <tr>
+    <th class="tg-7geq">Modo</th>
+    <th class="tg-7geq">Codificación<br></th>
+  </tr>
+  <tr>
+    <td class="tg-quxf">Inmediato<br></td>
+    <td class="tg-quxf">00000<br></td>
+  </tr>
+  <tr>
+    <td class="tg-quxf">Registro<br></td>
+    <td class="tg-quxf">100rrr<br></td>
+  </tr>
+  <tr>
+    <td class="tg-quxf">Directo<br></td>
+    <td class="tg-quxf">001000<br></td>
+  </tr>
+</table>
