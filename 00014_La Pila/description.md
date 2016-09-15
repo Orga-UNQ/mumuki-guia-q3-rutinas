@@ -49,3 +49,8 @@ Para solucionar este problema utilizaremos una *estructura de datos* (o una form
 
 Esta forma de operar determina qu no se pueda sacar datos que no estén en el tope ni pueden agregarse datos por el medio de la pila.
 
+
+#### La pila en la memoria
+
+Imaginemos que esta nueva estructura de datos la guardamos en una zona especial de memoria que va a ser **accedida solamente apilando y desapilando**.
+
