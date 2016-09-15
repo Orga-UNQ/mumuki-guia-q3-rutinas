@@ -54,3 +54,21 @@ Esta forma de operar determina qu no se pueda sacar datos que no estén en el to
 
 Imaginemos que esta nueva estructura de datos la guardamos en una zona especial de memoria que va a ser **accedida solamente apilando y desapilando**.
 
+
+
+|    | ...  |
+|--- |---|
+|FFE9|????|
+|FFEA|????|
+|FFEB|????|
+|FFEC|????|
+|FFED|????|
+|FFEE|????|
+|**FFEF**|????|
+|    |  ... |
+
+
+
+Asumimos que la pila comienza en la dirección **FFEF** de memoria. Pensemos que pasa al apilar el dato 0101 en dicha pila: Luego de esto el tope de pila es **FFFE**, para que el tope de pila represente en todo momento, **el primer lugar disponible sobre los valores ya apilados**. Eso implica que con cada push se debe **decrementar** la dirección que indica el tope de pila.
+Agregamos el elemento 1002 ¿donde queda el tope de pila?
+Supongamos que ahora se quiere desapilar (hacer un pop). El tope de pila debe ajustarse y luego debe copiarse el dato, porque el invariante es que el tope de pila representa el primer lugar disponible sobre los valores ya apilados.¿De que manera? ahora el tope de pila debe incrementarse.
