@@ -19,13 +19,14 @@ La instrucción `CALL` es la única de un operando orígen, y el formato de inst
 </table>
 
 Como se indica en la  [especificación](http://orga-unq.mumuki.io/exercises/2711-ejecucion-de-programas-q3-rutinas-especificacion-de-q3), el efecto que se espera es: 
+
 ```
 [SP]=PC; 
 SP=SP-1; 
 PC=Origen
 ```
 
-**¿Porqué se considera un operando Origen? **
+**¿Porqué se considera un operando Origen?**
 
 Pues porque el nuevo valor de PC es, justamente, el operando, y el operando destino de la instrucción CALL es siempre el mismo: **el registro PC**
 
