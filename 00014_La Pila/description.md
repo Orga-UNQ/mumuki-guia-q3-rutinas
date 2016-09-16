@@ -171,12 +171,13 @@ Para este ejemplo necesitamos saber:
 
 <table class="table"><thead>
 <tr>
-<th>Instruccion</th>
+<th colspan="2"> Instruccion</th>
 <th>Busqueda de Instrucción</th>
 <th  colspan="3">Ejecución de Instrucción</th>
 </tr>
 <tr>
-<th></th>
+<th>Ubicacion</th>
+<th>Codigo máquina</th>
 <th>(PC sig. inst.)</th>
 <th>PC</th>
 <th>SP</th>
@@ -184,6 +185,7 @@ Para este ejemplo necesitamos saber:
 </tr>
 </thead><tbody>
 <tr>
+<td>1000</td>
 <td><code>CALL rutina1</code></td>
 <td>1002</td>
 <td>00E0</td>
@@ -191,6 +193,7 @@ Para este ejemplo necesitamos saber:
 <td>1002</td>
 </tr>
 <tr>
+<td>00E0</td>
 <td><code>MOV R1, R0</code></td>
 <td>00E1</td>
 <td>00E1</td>
@@ -198,6 +201,7 @@ Para este ejemplo necesitamos saber:
 <td>1002</td>
 </tr>
 <tr>
+<td>00E1</td>
 <td><code>RET</code></td>
 <td>00E2</td>
 <td>1002</td>
@@ -205,6 +209,7 @@ Para este ejemplo necesitamos saber:
 <td>-</td>
 </tr>
 <tr>
+<td>1002</td>
 <td><code>CALL rutina1</code></td>
 <td>1004</td>
 <td>00E0</td>
@@ -212,6 +217,7 @@ Para este ejemplo necesitamos saber:
 <td>1004</td>
 </tr>
 <tr>
+<td>00E0</td>
 <td><code>MOV R1, R0</code></td>
 <td>00E1</td>
 <td>00E1</td>
@@ -219,6 +225,7 @@ Para este ejemplo necesitamos saber:
 <td>1004</td>
 </tr>
 <tr>
+<td>00E1</td>
 <td><code>RET</code></td>
 <td>00E2</td>
 <td>1004</td>
