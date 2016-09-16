@@ -177,7 +177,7 @@ Para este ejemplo necesitamos saber:
 </tr>
 <tr>
 <th></th>
-<th>PC sig. inst.</th>
+<th>(PC sig. inst.)</th>
 <th>Tope</th>
 <th>SP</th>
 <th>PC</th>
