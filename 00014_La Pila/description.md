@@ -169,11 +169,62 @@ Para este ejemplo necesitamos saber:
 * La pila está vacía (es decir, SP=FFEF
 
 
-| Instruccion          | PC luego de B.I | PC luego de E.I | SP luego de E.I. |Tope de pila|
-|---|---|---|---|---|
-| ``` CALL rutina1```  | 1002            | 00E0            | FFEE             | 1002       |
-| ``` MOV R1, R0```    | 00E1            | 00E1            | FFEE             | 1002       |
-| ``` RET```           | 00E2            | 1002            | FFEF             | -          |
-| ``` CALL rutina1```  | 1004            | 00E0            | FFEE             | 1004       |
-| ``` MOV R1, R0```    | 00E1            | 00E1            | FFEE             | 1004       |
-| ``` RET```           | 00E2            | 1004            | FFEF             | -          |
+<table class="table"><thead>
+<tr>
+<th>Instruccion</th>
+<th>Busqueda de Instrucción</th>
+<th  colspan="3">Ejecución de Instrucción</th>
+</tr>
+<tr>
+<th></th>
+<th>PC sig. inst.</th>
+<th>Tope</th>
+<th>SP</th>
+<th>PC</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>CALL rutina1</code></td>
+<td>1002</td>
+<td>00E0</td>
+<td>FFEE</td>
+<td>1002</td>
+</tr>
+<tr>
+<td><code>MOV R1, R0</code></td>
+<td>00E1</td>
+<td>00E1</td>
+<td>FFEE</td>
+<td>1002</td>
+</tr>
+<tr>
+<td><code>RET</code></td>
+<td>00E2</td>
+<td>1002</td>
+<td>FFEF</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>CALL rutina1</code></td>
+<td>1004</td>
+<td>00E0</td>
+<td>FFEE</td>
+<td>1004</td>
+</tr>
+<tr>
+<td><code>MOV R1, R0</code></td>
+<td>00E1</td>
+<td>00E1</td>
+<td>FFEE</td>
+<td>1004</td>
+</tr>
+<tr>
+<td><code>RET</code></td>
+<td>00E2</td>
+<td>1004</td>
+<td>FFEF</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
