@@ -178,9 +178,9 @@ Para este ejemplo necesitamos saber:
 <tr>
 <th></th>
 <th>(PC sig. inst.)</th>
-<th>Tope</th>
-<th>SP</th>
 <th>PC</th>
+<th>SP</th>
+<th>Tope</th>
 </tr>
 </thead><tbody>
 <tr>
