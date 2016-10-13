@@ -68,7 +68,7 @@ Bueno, pero este código no es correcto en Q3.
 
 ## Configurando parámetros
 
-Aquello que varía en el ejemplo anterior (`?`) se denomina **parámetro**, y es una variable cuyo valor se debe configurar previamente a la llamada de la rutina. 
+Aquello que varía en el ejemplo anterior (denotado con `?`) se denomina **parámetro**, y es una variable cuyo valor se debe configurar previamente a la llamada de la rutina. 
 
 Para que sea parametrizable, una posibilidad es que la rutina anterior tome como parámetro el valor en el registro R0 y se reescribe:
 
