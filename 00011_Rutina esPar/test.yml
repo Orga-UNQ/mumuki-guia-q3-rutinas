@@ -1,1 +1,17 @@
-equal: ''
+examples:
+- name: 'El resultado es correcto para un numero par'
+  preconditions:
+    records:
+      R0: 'AAA8'
+  postconditions:
+    equal:
+      R1: '0'
+
+- name: 'El resultado es correcto para un numero impar'
+  preconditions:
+    records:
+      R0: '1239'
+  postconditions:
+    equal:
+      R1: '1'
+
