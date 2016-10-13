@@ -1,0 +1,3 @@
+esPar: 
+   DIV R0, 0x0002
+RET
