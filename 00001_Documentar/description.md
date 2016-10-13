@@ -63,3 +63,12 @@ promedio: ADD R5, R6
       DIV R5, 0x0002
       MOV R1, R5
 ```
+
+Completando el siguiente texto:
+
+
+```
+Requiere:  
+Modifica:
+Retorna: 
+```
