@@ -1,6 +1,7 @@
 ---
 tags: []
-layout: no_editor
+layout: input_bottom
+editor: hidden
 type: problem
 extra_visible: false
 language: 
